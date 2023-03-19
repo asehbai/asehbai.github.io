@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Volleyball Scorekeeper</title>
+    <style>
+      /* Basic page styling */
+      body {
+        font-family: sans-serif;
+      }
+      h1 {
+        text-align: center;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .team {
+        width: 50%;
+        text-align: center;
+      }
+      .score {
+        font-size: 8rem;
+        font-weight: bold;
+      }
+      button {
+        display: block;
+        margin: 0 auto;
+        font-size: 2rem;
+        padding: 1rem 2rem;
+      }
+      button:focus {
+        outline: none;
+      }
+      button:active {
+        transform: translateY(2px);
+      }
+      /* Team-specific styling */
+      .team-1 {
+        border-right: 4px solid #333;
+      }
+      .team-2 {
+        border-left: 4px solid #333;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Volleyball Scorekeeper</h1>
+    <div class="container">
+      <div class="team team-1">
+        <h2>Team 1</h2>
+        <div class="score" id="score-1">0</div>
+        <button id="team-1-btn">+1</button>
+      </div>
+      <div class="team team-2">
+        <h2>Team 2</h2>
+        <div class="score" id="score-2">0</div>
+        <button id="team-2-btn">+1</button>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
