@@ -61,9 +61,18 @@
         let currentScore = parseInt(score2.textContent);
         score2.textContent = ++currentScore;
       }
-      
-      score1.addEventListener("click", incrementScore1);
-      score2.addEventListener("click", incrementScore2);
+
+ // add event listeners to score divs
+score1.addEventListener('click', incrementScore1);
+score2.addEventListener('click', incrementScore2);
+
+if (window.matchMedia("(max-width: 768px)").matches) {
+  score1.addEventListener('dblclick', incrementScore1);
+  score2.addEventListener('dblclick', incrementScore2);
+}
+     
+ 
+
     </script>
   </body>
 </html>
